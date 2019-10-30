@@ -18,7 +18,7 @@ don't have the same extensibility. Out of the box any traffic, for any host, sen
 to the server will attempt to serve static files, but you can also route the
 traffic any way you like. Imagine for a second the simple server instance callback.
 
-```
+```JavaScript
 (req, res) => {
   res.end("Hello World")
 }
@@ -36,6 +36,22 @@ This server system is designed for the modern web and requires SSL. It would be
 better practice to use SSL anyway, as Google is soon to ban any website not holding
 a SSL Certificate. There are a number of ways to obtain a certificate, but the
 one I use is LetsEncrypt.
+
+### Setup
+
+1. Install node.js
+
+2. Download the repository
+
+3. Move the directory (or copy the contents to destination)
+
+4. Start the Server
+```
+cd /path/to/server
+sudo node .
+```
+
+### Examples
 
 ### License
 
