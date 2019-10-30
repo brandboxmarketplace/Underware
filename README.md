@@ -24,5 +24,15 @@ traffic any way you like. Imagine for a second the simple server instance callba
 }
 ```
 
-Every domain/subdomain is kept completely separate with it's own file structure,
-which is already a plus for organization, and each route has it's own callback (organization++).
+Instead of having a million if/else statements trying to figure out where the traffic
+is supposed to go, because that's all node.js gives you is this callback, why not
+have a callback for each destination? The file structure is set up in a way where
+a given host can be "hotswappable" and separate from each other. Meaning that
+this server supports multiple domains, just point each one at the server and
+create the directory no further configuration needed (with the exception of the
+app.js file if applicable).
+
+This server system is designed for the modern web and requires SSL. It would be
+better practice to use SSL anyway, as Google is soon to ban any website not holding
+a SSL Certificate. There are a number of ways to obtain a certificate, but the
+one I use is LetsEncrypt.
