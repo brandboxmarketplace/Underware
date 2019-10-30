@@ -6,11 +6,16 @@ router.get('/', (req, res)=>{
   res.end('<h1>Nice Underware!</h1>');
 })
 
+// htaccess style
+router.get('/hello','/world.html') // alias
+router.get('/hello','/hello.html?a=world,302') // alias redirect
+router.get('/out','https://out.hello.gg,302') // redirect
+
 /*
   Further routers via get, post, update, patch, delete, and put all depending on
   the expected method:
 
-  router.get(route, (req, res))
+  router.get(route, [(req, res)|"string"])
   router.get(route/:parameters/:go/:here, (req, res)) =>
     req.paras = {
       parameters: <string>,
