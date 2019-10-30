@@ -35,7 +35,7 @@ app.js file if applicable).
 This server system is designed for the modern web and requires SSL. It would be
 better practice to use SSL anyway, as Google is soon to ban any website not holding
 a SSL Certificate. There are a number of ways to obtain a certificate, but the
-one I use is LetsEncrypt.
+one I use is [LetsEncrypt](https://letsencrypt.org).
 
 ### Setup
 
