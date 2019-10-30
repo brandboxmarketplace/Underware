@@ -50,6 +50,7 @@ sudo node .
 5. Add a folder for each destination in the /domains directory (eg. sub.domain.com)
 
 If you plan on having routes:
+
 6. In each folder added create an **app.js**
 7. Add the following to the top:
 ```JavaScript
