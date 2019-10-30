@@ -1,0 +1,5 @@
+{
+  "cert": "/path/to/cert",
+  "key": "/path/to/key",
+  "ip": "127.0.0.1"
+}
