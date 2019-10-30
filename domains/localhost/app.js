@@ -8,8 +8,9 @@ router.get('/', (req, res)=>{
 
 // htaccess style
 router.get('/hello','/world.html') // alias
-router.get('/hello','/hello.html?a=world,302') // alias redirect
+router.get('/hello/:world','/hello.html?a=$world,302') // alias redirect
 router.get('/out','https://out.hello.gg,302') // redirect
+// default redirect: 302
 
 /*
   Further routers via get, post, update, patch, delete, and put all depending on
