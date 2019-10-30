@@ -42,22 +42,23 @@ one I use is LetsEncrypt.
 1. Install node.js
 2. Download the repository
 3. Move the directory (or copy the contents to destination)
-4. Start the Server
+4. Edit the config.json file with your values
+5. Start the Server
 ```
 cd /path/to/server
 sudo node .
 ```
-5. Add a folder for each destination in the /domains directory (eg. sub.domain.com)
+6. Add a folder for each destination in the /domains directory (eg. sub.domain.com)
 
 If you plan on having routes:
 
-6. In each folder added create an **app.js**
-7. Add the following to the top:
+7. In each folder added create an **app.js**
+8. Add the following to the top:
 ```JavaScript
 let root = __dirname.split('/').pop(2).join('/')
 let router = require(root+'/lib/router.js')
 ```
-8. Add routes
+9. Add routes
 ```JavaScript
 router.get("/",(req, res)=>{
   // custom rendering
