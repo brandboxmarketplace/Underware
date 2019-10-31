@@ -1,5 +1,5 @@
-let root = __dirname.split('/').pop(2).join('/')
-let router = require(root+'/lib/router.js')
+let __root = __dirname.split('/').pop(2).join('/')
+let router = require(__root+'/lib/router')
 
 module.exports = {
   handle: (req, res)=>{
