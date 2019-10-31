@@ -11,7 +11,9 @@ After many attempts and frustration, I think I finally have what does do it for 
 
 Instead of having a million if/else statements trying to figure out where the traffic is supposed to go, because that's all node.js gives you is this callback, why not have a callback for each destination? The file structure is set up in a way where a given host can be "hotswappable" and separate from each other. Meaning that this server supports multiple domains, just point each one at the server and create the directory no further configuration needed (with the exception of the app.js file if applicable). Again, I don't like using libraries, so it's kind of ironic that I'm sharing one, but I didn't want to keep it all to myself.
 
-This server system is designed for the modern web and requires SSL. It would be better practice to use SSL anyway, as Google is soon to ban any website not holding a SSL Certificate. There are a number of ways to obtain a certificate, but the one I use is [LetsEncrypt](https://letsencrypt.org).
+This server system is designed for the modern web and requires SSL. It would be better practice to use SSL anyway, as Google is soon to ban any website not holding a SSL Certificate. There are a number of ways to obtain a certificate, but the one I use is [LetsEncrypt](https://letsencrypt.org). This module is part of a set, and is strictly only responsible for handling traffic. The rest will be coming shortly and will be "pants". Each pair of pants will have their own purpose as to actually rendering a page with less code. Spoiler: "Shorts", "Jeans", and "Slacks" will be among the first.
+
+The naming convention may be a little different, but it should make perfect sense. Underwear isn't what you want everyone to see, but they are lightweight and important. Your choice of pants is what everyone else sees, and each have their own purposes.
 
 ### Setup
 
