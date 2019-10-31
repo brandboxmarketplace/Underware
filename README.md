@@ -1,7 +1,7 @@
 # Underware
 If you are anything like me you like to do everything yourself, and you want to get it done as fast as possible, as good as you can. I'm not a fan of libraries from experience they add too much overhead for only a few features. There is no way you are going to use every feature of any given library. That is where UnderWare comes in. Let's just say the vanilla Node.js web modules need some help. They are really only designed for a single page, or a RestAPI. I like using Node.js for my web server because I have complete control over it, and it makes sense to keep everything JavaScript. However, like I said if you are trying to build a complete web site, you don't really have that many options. I haven't really found anything that does exactly what I want without having to mix a lot of modules together, or worse being forced to install modules that I'm not even using.
 
-After many attempts and frustration, I think I finally have what does do it for me. It doesn't require any additional modules to operate as intended, you will have to however still have to install the modules that you want for other things to operate (outside the scope of just the web server). Your results may vary, but the simple plug and play usability that is provided by UnderWare is very appealing. You don't actually need to type a single bit of code (server side) to get a web site up and running. That doesn't mean that you don't have the same extensibility. Out of the box any traffic, for any host, sent to the server will attempt to serve static files, but you can also route the traffic any way you like. Imagine for a second the simple server instance callback. Again, I don't like using libraries, so it's kind of ironic that I'm sharing one, but I didn't want to keep it all to myself.
+After many attempts and frustration, I think I finally have what does do it for me. It doesn't require any additional modules to operate as intended, you will have to however still have to install the modules that you want for other things to operate (outside the scope of just the web server). Your results may vary, but the simple plug and play usability that is provided by UnderWare is very appealing. You don't actually need to type a single bit of code (server side) to get a web site up and running. That doesn't mean that you don't have the same extensibility. Out of the box any traffic, for any host, sent to the server will attempt to serve static files, but you can also route the traffic any way you like. Imagine for a second the simple server instance callback.
 
 ```JavaScript
 (req, res) => {
@@ -9,7 +9,7 @@ After many attempts and frustration, I think I finally have what does do it for 
 }
 ```
 
-Instead of having a million if/else statements trying to figure out where the traffic is supposed to go, because that's all node.js gives you is this callback, why not have a callback for each destination? The file structure is set up in a way where a given host can be "hotswappable" and separate from each other. Meaning that this server supports multiple domains, just point each one at the server and create the directory no further configuration needed (with the exception of the app.js file if applicable).
+Instead of having a million if/else statements trying to figure out where the traffic is supposed to go, because that's all node.js gives you is this callback, why not have a callback for each destination? The file structure is set up in a way where a given host can be "hotswappable" and separate from each other. Meaning that this server supports multiple domains, just point each one at the server and create the directory no further configuration needed (with the exception of the app.js file if applicable). Again, I don't like using libraries, so it's kind of ironic that I'm sharing one, but I didn't want to keep it all to myself.
 
 This server system is designed for the modern web and requires SSL. It would be better practice to use SSL anyway, as Google is soon to ban any website not holding a SSL Certificate. There are a number of ways to obtain a certificate, but the one I use is [LetsEncrypt](https://letsencrypt.org).
 
@@ -33,6 +33,12 @@ If you plan on having routes:
 ```JavaScript
 let root = __dirname.split('/').pop(2).join('/')
 let router = require(root+'/lib/router.js')
+
+module.exports = {
+  handle: (req, res)=>{
+    router.handle(req, res)
+  }
+}
 ```
 9. Add routes
 ```JavaScript

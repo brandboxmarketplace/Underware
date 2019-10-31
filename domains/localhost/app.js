@@ -1,6 +1,12 @@
 let root = __dirname.split('/').pop(2).join('/')
 let router = require(root+'/lib/router.js')
 
+module.exports = {
+  handle: (req, res)=>{
+    router.handle(req, res)
+  }
+}
+
 router.get('/', (req, res)=>{
   res.writeHead(200, {'Content-Type':'text/html'});
   res.end('<h1>Nice Underware!</h1>');
