@@ -33,7 +33,7 @@ If you plan on having routes:
 7. In each folder added create an **app.js**
 8. Add the following to the top:
 ```JavaScript
-let router = require(__root+'/lib/router.js')
+let router = require(__lib+'/router.js')
 
 module.exports = {
   handle: (req, res)=>{

@@ -1,5 +1,4 @@
-let root = require.main.dirname
-let router = require(root+'/lib/router.js')
+let router = require(__lib+'/router.js')
 
 module.exports = {
   handle: (req, res)=>{
