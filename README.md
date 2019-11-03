@@ -33,7 +33,7 @@ If you plan on having routes:
 7. In each folder added create an **app.js**
 8. Add the following to the top:
 ```JavaScript
-let root = __dirname.split('/').pop(2).join('/')
+let root = __dirname+'/../..'
 let router = require(root+'/lib/router.js')
 
 module.exports = {
