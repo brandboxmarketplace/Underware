@@ -1,4 +1,4 @@
-let root = __dirname+'/../..'
+let root = require.main.dirname
 let router = require(root+'/lib/router.js')
 
 module.exports = {
