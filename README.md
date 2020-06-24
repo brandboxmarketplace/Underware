@@ -46,10 +46,12 @@ For an example look at the **localhost** folder in /domains.
 
 ### Templating
 
-I have added a new feature that brings html and node closer together. The api is very simple to php, but instead runs javascript in the NodeJS scope. Not intended for front-end use, but personally has sped up building pages that require server-side construction within Node. 
+I have added a new feature that brings html and node closer together. The api is very similar to php, but instead runs javascript in the NodeJS scope. Not intended for front-end use, but personally has sped up building pages that require server-side construction within Node. 
 
-```JavaScript
+```HTML
 <? //inline ?>
+<? for(let i = 0;i < 10;i++){ ?><span><? write(i); ?></span><? } ?>
+<!-- write(data); is how you "echo" data into the html the above will print 10 spans all with index -->
 <? 
   //multi-line
   //notice the tags need to be on their own line I will change this later, but as of right now
