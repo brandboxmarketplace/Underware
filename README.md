@@ -44,6 +44,26 @@ router.get("/",(req, res)=>{
 
 For an example look at the **localhost** folder in /domains.
 
+### Templating
+
+I have added a new feature that brings html and node closer together. The api is very simple to php, but instead runs javascript in the NodeJS scope. Not intended for front-end use, but personally has sped up building pages that require server-side construction within Node. 
+
+```JavaScript
+<? //inline ?>
+<? 
+  //multi-line
+  //notice the tags need to be on their own line I will change this later, but as of right now
+?>
+<include /path/to/nested/node.node>
+```
+
+When ever the router tries to serve a ".node" file it will automatically build the page. So in your "app.js" if you add:
+```JavaScript
+router.get("/alias","/real/path.node")
+```
+It will build the templated page without any further action. (Besides actually building the page which is just html and the above tags)
+You can also simply link to the ".node" file from address bar it will still construct the page before the client gets it, but I personally would rather keep this extension hidden.
+
 ### License
 
 (The MIT License)
