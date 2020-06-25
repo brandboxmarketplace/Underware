@@ -48,6 +48,9 @@ For an example look at the **localhost** folder in /domains.
 
 I have added a new feature that brings html and node closer together. The api is very similar to php, but instead runs javascript in the NodeJS scope. Not intended for front-end use, but personally has sped up building pages that require server-side construction within Node. 
 
+> Do not use async actions within templating nodes. 
+> Very annoying, but I'm working on it.
+
 ```HTML
 <? //inline ?>
 <? for(let i = 0;i < 10;i++){ ?><span><? write(i); ?></span><? } ?>
