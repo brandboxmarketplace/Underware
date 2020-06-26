@@ -1,5 +1,5 @@
 {
-  "name": "underware",
+  "name": "@parmleyhunt/underware",
   "version": "0.0.3",
   "description": "Modular vanilla nodeJS web server",
   "repository": {
@@ -7,5 +7,5 @@
     "url": "https://github.com/parmleyhunt/Underware.git"
   },
   "author": "Hunter Parmley",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/parmleyhunt" }
 }
