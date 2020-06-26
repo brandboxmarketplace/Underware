@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/parmleyhunt/Underware.git"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Hunter Parmley",
   "publishConfig": { "registry": "https://npm.pkg.github.com/parmleyhunt" }
 }
