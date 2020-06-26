@@ -1,7 +1,7 @@
 # Underware
 [Wiki](https://github.com/parmleyhunt/Underware/wiki)
 
-I really don't like callbacks and the fact that NodeJS only gives you one per server, this made me think. What if you could have one server, but have a call back for each domain? Well I did it and it's awesome. This workflow works a lot better than I couldv'e imagined. I made it work a lot like a Apache/PHP workflow. The [app.js](https://github.com/parmleyhunt/Underware/wiki#appjs) works a lot like a .htaccess. The nodes are based off inline-php, but can do things traditional php just can't.
+I really don't like callbacks and the fact that NodeJS only gives you one per server, this made me think. What if you could have one server, but have a call back for each domain? Well I did it and it's awesome. This workflow works a lot better than I could've imagined. I made it work a lot like a Apache/PHP workflow. The [app.js](https://github.com/parmleyhunt/Underware/wiki#appjs) works a lot like a .htaccess. The nodes are based off inline-php, but can do things traditional php just can't.
 
 I made it very lightweight and unintrusive, mainly meaning that migration to and from Underware is just a cut/paste. Out of the box it will try to serve static files, this can be altered via the app.js. Each domain is essentially it's own zone. One domain can't break into another, with the exception of the shared directory. All paths and files only exist for each domain.
 
