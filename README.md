@@ -50,7 +50,6 @@ I have added a new feature that brings html and node closer together. The api is
 <!-- write(data); is how you "echo" data into the html the above will print 10 spans all with index -->
 <? 
   //multi-line
-  //notice the tags need to be on their own line I will change this later, but as of right now
 ?>
 <include /path/to/nested/node.node>
 ```
