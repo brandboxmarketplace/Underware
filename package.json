@@ -10,5 +10,8 @@
     "test": "mocha"
   },
   "author": "Hunter Parmley",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/parmleyhunt" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/parmleyhunt"
+  },
+  "dependencies": {}
 }

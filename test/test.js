@@ -26,5 +26,8 @@ describe('Tests', function () {
     it('close w/ inline', function(){
       assert.equal(temp.convert("write('a');?>1<? write('b'); ?>"), "write('a');\r\nwrite('1');\r\nwrite('b');\r\n");
     })
+    it('include tag', function(){
+      assert.equal(temp.convert("<include a.node>"), "write('hello');\r\n");
+    })
   });
 });
