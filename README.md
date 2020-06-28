@@ -9,6 +9,9 @@ This server system is designed for the modern web and requires SSL. It would be 
 
 The naming convention may be a little different, but it should make perfect sense. Underwear is the base layer, and your pants only function, more protection, or style.
 
+### Boxers (0.0.5) in-dev
+With the addition of nodes (in 0.0.4) there is not a need for custom routing in the app.js. This started making me think about how I can make managing the server itself easier. Following the trend for headless containers, I've decided to start working on a web-gui to manage Users/Groups, Routes, Configuration, and dependencies. This new update is going to be a big one so I thought that this would be a better option than a cli approach (although this could still be an option). The web-gui would exclusively be available, because of how Underware resolves the destination. If you were to access the local ip vs. the domain they will resolve differently. Making the web-gui only available to management. I could have very well just put it on a seperate port, but that would require an additional server instance running. Plus I haven't and don't plan on having port routing incorporated.
+
 ### Setup
 
 1. Install node.js
