@@ -41,9 +41,9 @@ router.get("/",(req, res)=>{
 
 For an example look at the **localhost** folder in /domains.
 
-### Templating
+### Nodes
 
-I have added a new feature that brings html and node closer together. The api is very similar to php, but instead runs javascript in the NodeJS scope. Not intended for front-end use, but personally has sped up building pages that require server-side construction within Node. 
+In Briefs(0.0.4), I added a templating add-on feature that allowed you to inject server-side javascript into html pages, and manipulate the page like php used to do. After using this feature for a bit I've decided to make it a fundamental feature. The code required is very lightweight, and doesn't consume anymore performance than constructing html from javascript. Having access to the Request/Response objects completely removes the need for a callback all together, however you can still do it this way for Rest-Api or similar. It has sped up the development of data intensive pages in my own projects. It will change the way you think about NodeJS, hence the extension, it truely brings out the power of server-side javascript.
 
 > You must preface async functions with await.
 
@@ -57,9 +57,8 @@ I have added a new feature that brings html and node closer together. The api is
 <include /path/to/nested/node.node>
 ```
 
-When ever the router tries to serve a ".node" file it will automatically build the page. So in your "app.js" if you add:
+When ever the router tries to serve a ".node" file (from url request or app.js) it will automatically build the page. So in your "app.js" if you add:
 ```JavaScript
 router.get("/alias","/real/path.node")
 ```
-It will build the templated page without any further action. (Besides actually building the page which is just html and the above tags)
-You can also simply link to the ".node" file from address bar it will still construct the page before the client gets it, but I personally would rather keep this extension hidden.
+or you goto ```https://example.com/real/path.node``` it will render the same page.
